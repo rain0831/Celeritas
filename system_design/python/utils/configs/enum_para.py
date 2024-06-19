@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 
 class LearningTask(Enum):
-    NODE_EMBEDDINGS = "ne"
+    NODE_CLASSIFICATION = "nc"
     LINK_PREDICTION = "lp"
 
 

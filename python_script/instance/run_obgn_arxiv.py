@@ -7,7 +7,7 @@ def run_ogbn_arxiv(dataset_dir, results_dir, overwrite, enable_dstat, enable_nvi
 
     dataset_name = "ogbn_arxiv"
 
-    arxiv_config_path = Path("python_script/instance/configs_yaml/ogbn_arxiv/ogbn_arxiv.yaml")
+    arxiv_config_path = Path("/workspace/Celeritas/python_script/instance/configs_yaml/ogbn_arxiv/ogbn_arxiv.yaml")
 
     if not (dataset_dir / Path(dataset_name) / Path("edges/train_edges.bin")).exists():
         print("==== Dataset {} is not on local, downloading... =====".format(dataset_name))
