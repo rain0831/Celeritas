@@ -3,8 +3,8 @@ import shutil
 import subprocess
 import sys
 import time
-from trace_usage import DstatMonitor, NvidiaSmiMonitor
-import parse_result
+from .trace_usage import DstatMonitor, NvidiaSmiMonitor
+from . import parse_result
 
 from pathlib import Path
 

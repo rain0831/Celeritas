@@ -1,4 +1,4 @@
-from celeritas.utils.preprocessing.dataset.ogbn_papers100m import OGBNPapers100M
+from celeritas.utils.preprocessing.dataset.ogbn_papers100M import OGBNPapers100M
 import utils.executor as e
 import utils.report_result as r
 from pathlib import Path

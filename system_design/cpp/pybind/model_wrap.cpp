@@ -7,8 +7,8 @@ namespace py = pybind11;
 
 void init_model(py::module &m) {
 
-    py::class_<torch::nn::Module, std::shared_ptr<torch::nn::Module>>(m, "torch::nn::Module");
-    py::class_<Model, torch::nn::Module, std::shared_ptr<Model>>(m, "Model")
+    py::class_<torch::nn::Module, std::shared_ptr<torch::nn::Module>>(m, "torch::nn::Module", py::module_local());
+    py::class_<Model, torch::nn::Module, std::shared_ptr<Model>>(m, "Model", py::module_local())
             .def_readwrite("featurizer", &Model::featurizer_)
             .def_readwrite("featurizer_optimizer", &Model::featurizer_optimizer_)
             .def_readwrite("encoder", &Model::encoder_)

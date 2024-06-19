@@ -2,7 +2,7 @@ import glob
 from pathlib import Path
 from dataclasses import dataclass
 import pandas as pd
-import parse_result
+from .parse_result import *
 import ast
 
 
