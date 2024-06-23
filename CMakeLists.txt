@@ -190,6 +190,10 @@ add_executable(celeritas_eval ${project_SOURCE_DIR}/celeritas.cpp)
 target_link_libraries(celeritas_train ${PROJECT_NAME})
 target_link_libraries(celeritas_eval ${PROJECT_NAME})
 
+# 用于生成调试信息，可能会拖慢运行速度，性能测试请删除如下编译命令
+target_compile_options(celeritas_train PRIVATE -g)
+target_compile_options(celeritas_eval PRIVATE -g)
+
 pybind11_add_module(_pyceleritas ${project_SOURCES} ${project_BINDINGS})
 
 find_library(TORCH_PYTHON_LIBRARY torch_python PATHS "${TORCH_INSTALL_PREFIX}/lib")

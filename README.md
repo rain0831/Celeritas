@@ -40,7 +40,7 @@ After installing Celeritas, you can run it using the following steps:
    - You can specify the dataset for the experiment using one of the following commands:
      - For `ogbn-arxiv` dataset:
        ```bash
-       python3 run.py --experiment instance_arxiv
+       python3 run.py --experiment instance_arxiv --overwrite --show_output
        ```
      - For `ogbn-paper100M` dataset:
        ```bash
@@ -48,9 +48,9 @@ After installing Celeritas, you can run it using the following steps:
        ```
 
 3. **Output Options**:
-   - To display the results in the console, add the `--show_output_console` flag:
+   - To display the results in the console, add the `--show_output` flag:
      ```bash
-     python3 run.py --show_output_console
+     python3 run.py --show_output
      ```
    - Without this flag, results are saved in the `python_script/results` directory.
 
