@@ -1,0 +1,23 @@
+# Ignore binary files
+*.bin
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore build directories
+build/
+dist/
+
+# Ignore C extensions
+*.so
+
+# Ignore logs
+*.log
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+python_script/datasets/
