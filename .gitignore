@@ -21,3 +21,4 @@ dist/
 Thumbs.db
 
 python_script/datasets/
+python_script/results/

@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.12.2)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_C_COMPILER_LAUNCHER ccache)
+set(CMAKE_CXX_COMPILER_LAUNCHER ccache)
 cmake_policy(SET CMP0048 NEW)
 
 project(celeritas VERSION 0.1 LANGUAGES CXX)

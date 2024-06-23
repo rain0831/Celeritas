@@ -17,7 +17,8 @@ OUTPUT_FILE = "out_{}.txt"
 def run_cmd(cmd: str, output_dir: Path, run_id, output_to_terminal):
     with open(output_dir / Path(OUTPUT_FILE.format(run_id)), "w") as tmp_file:
         os.environ["PYTHONUNBUFFERED"] = "1"
-
+        print("RUN_CMD: ")
+        print(cmd.split())
         proc = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         for line in proc.stdout:
             line = line.decode("utf-8")
