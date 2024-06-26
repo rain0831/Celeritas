@@ -2,7 +2,8 @@ import argparse
 import os
 from pathlib import Path
 
-from instance.run_obgn_arxiv import run_ogbn_arxiv
+from instance.run_karate import run_karate
+from instance.run_ogbn_arxiv import run_ogbn_arxiv
 from instance.run_ogbn_paper100M import run_ogbn_paper100M
 
 
@@ -11,6 +12,7 @@ DEFAULT_RESULTS_DIRECTORY = "results/"
 
 if __name__ == "__main__":
     experiment_dict = {
+        "instance_karate": run_karate,
         "instance_arxiv": run_ogbn_arxiv,
         "instance_papers100m": run_ogbn_paper100M,
     }

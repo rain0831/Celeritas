@@ -38,13 +38,18 @@ After installing Celeritas, you can run it using the following steps:
      python3 run.py
      ```
    - You can specify the dataset for the experiment using one of the following commands:
+     - For `karate` dataset:
+       ```bash
+       python3 run.py --experiment instance_karate --overwrite --show_output
+       celeritas_train /workspace/Celeritas/python_script/instance/configs_yaml/karate/karate.yaml
+       ```
      - For `ogbn-arxiv` dataset:
        ```bash
        python3 run.py --experiment instance_arxiv --overwrite --show_output
        ```
-     - For `ogbn-paper100M` dataset:
+     - For `ogbn-papers100m` dataset:
        ```bash
-       python3 run.py --experiment instance_paper100M
+       python3 run.py --experiment instance_papers100m
        ```
 
 3. **Output Options**:
@@ -53,4 +58,9 @@ After installing Celeritas, you can run it using the following steps:
      python3 run.py --show_output
      ```
    - Without this flag, results are saved in the `python_script/results` directory.
+
+
+   ```
+   tensor_to_string("").c_str()
+   ```
 

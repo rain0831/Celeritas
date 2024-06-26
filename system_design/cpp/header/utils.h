@@ -62,4 +62,8 @@ int64_t pwrite_wrapper(int fd, const void *buf, int64_t count, int64_t offset);
 torch::Tensor transfer_tensor(torch::Tensor input, torch::Device device, at::cuda::CUDAStream *compute_stream = nullptr,
                               at::cuda::CUDAStream *transfer_stream = nullptr);
 
+std::string tensor_to_string(const torch::Tensor& tensor);
+
+std::string tensor_to_string(const std::vector<torch::Tensor>& tensors);
+
 #endif
